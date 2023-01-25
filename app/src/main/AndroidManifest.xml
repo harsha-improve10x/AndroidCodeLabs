@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AndroidCodeLabs"
         tools:targetApi="31">
         <activity
-            android:name=".DatePickerActivity"
+            android:name=".TimePickerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +26,16 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SeekBarActivity"
+            android:name=".DatePickerActivity"
             android:exported="true">
 
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SeekBarActivity"
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

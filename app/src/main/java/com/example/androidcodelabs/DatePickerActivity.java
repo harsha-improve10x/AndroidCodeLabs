@@ -17,11 +17,11 @@ public class DatePickerActivity extends AppCompatActivity {
         datePickerBinding = ActivityDatePickerBinding.inflate(getLayoutInflater());
         setContentView(datePickerBinding.getRoot());
         getSupportActionBar().setTitle("Date Picker");
-        datePickerBinding.textView1.setText("Change Date: " + getCurrentDate());
+        datePickerBinding.datePickerTxt.setText("Change Date: " + getCurrentDate());
         datePickerBinding.button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                datePickerBinding.textView1.setText("Change Date: " + getCurrentDate());
+                datePickerBinding.datePickerTxt.setText("Change Date: " + getCurrentDate());
             }
         });
     }
