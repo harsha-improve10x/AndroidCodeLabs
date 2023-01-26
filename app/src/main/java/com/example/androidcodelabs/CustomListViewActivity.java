@@ -4,20 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.androidcodelabs.databinding.ActivityListViewBinding;
+import com.example.androidcodelabs.databinding.ActivityCustomListViewBinding;
 
 import java.util.ArrayList;
 
 public class CustomListViewActivity extends AppCompatActivity {
 
-    private ActivityListViewBinding activityListViewBinding;
+    private ActivityCustomListViewBinding activityListViewBinding;
     private ArrayList<Message> messages;
     MessagesAdapter messagesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityListViewBinding = ActivityListViewBinding.inflate(getLayoutInflater());
+        activityListViewBinding = ActivityCustomListViewBinding.inflate(getLayoutInflater());
         setContentView(activityListViewBinding.getRoot());
         getSupportActionBar().setTitle("List View");
         setData();
@@ -39,7 +39,7 @@ public class CustomListViewActivity extends AppCompatActivity {
     }
 
     private void setMessagesLv() {
-        messagesAdapter = new MessagesAdapter(this, R.layout.activity_list_view, messages);
+        messagesAdapter = new MessagesAdapter(this, R.layout.activity_custom_list_view, messages);
         activityListViewBinding.messagesLv.setAdapter(messagesAdapter);
     }
 }
