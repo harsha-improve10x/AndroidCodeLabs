@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.androidcodelabs.databinding.MessageFileLayoutBinding;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class MessagesAdapter extends ArrayAdapter<Message> {
         Message item = getItem(position);
         binding.nameTxt.setText(item.name);
         binding.messageTxt.setText(item.message);
+        Picasso.get().load(item.imageView).into(binding.profileIv);
         return binding.getRoot();
     }
 }

@@ -30,11 +30,13 @@ public class CustomListViewActivity extends AppCompatActivity {
         Message harsha = new Message();
         harsha.name = "ShreeHarsha A";
         harsha.message = "Welcome to Improve 10X";
+        harsha.imageView = "https://www.shutterstock.com/image-photo/portrait-smiling-red-haired-millennial-260nw-1194497251.jpg";
         messages.add(harsha);
 
         Message manoj = new Message();
         manoj.name = "Manoj M";
         manoj.message = "Hi, Welcome to Improve 10X";
+        harsha.imageView = "https://www.shutterstock.com/image-photo/portrait-smiling-red-haired-millennial-260nw-1194497251.jpg";
         messages.add(manoj);
     }
 
