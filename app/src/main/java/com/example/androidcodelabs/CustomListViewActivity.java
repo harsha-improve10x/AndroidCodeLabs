@@ -8,7 +8,7 @@ import com.example.androidcodelabs.databinding.ActivityListViewBinding;
 
 import java.util.ArrayList;
 
-public class ListViewActivity extends AppCompatActivity {
+public class CustomListViewActivity extends AppCompatActivity {
 
     private ActivityListViewBinding activityListViewBinding;
     private ArrayList<Message> messages;

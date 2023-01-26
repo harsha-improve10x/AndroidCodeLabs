@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AndroidCodeLabs"
         tools:targetApi="31">
         <activity
-            android:name=".ListViewActivity"
+            android:name=".CustomListViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
