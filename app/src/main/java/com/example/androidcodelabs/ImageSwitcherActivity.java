@@ -25,7 +25,6 @@ public class ImageSwitcherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         imageSwitcherBinding = ActivityImageSwitcherBinding.inflate(getLayoutInflater());
         setContentView(imageSwitcherBinding.getRoot());
-         count = 3;
         handleImageSwitcher();
         handleNextBtn();
     }
@@ -57,13 +56,12 @@ public class ImageSwitcherActivity extends AppCompatActivity {
     private void setImages() {
         int[] imageSwitcherImages = {R.drawable.garelu, R.drawable.boorelu, R.drawable.daddojanam,
         R.drawable.pulihora};
-        if (count < imageSwitcherImages.length) {
-            if (count == 3) {
-                Toast.makeText(this, "No Images", Toast.LENGTH_SHORT).show();
-            } else {
-                count++;
+        count++;
+        if (count == imageSwitcherImages.length) {
+            count = 0;
+            imageSwitcherBinding.imageSwitcher.setImageResource(imageSwitcherImages[count]);
+        } else {
                 imageSwitcherBinding.imageSwitcher.setImageResource(imageSwitcherImages[count]);
             }
         }
     }
-}
