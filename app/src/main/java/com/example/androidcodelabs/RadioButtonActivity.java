@@ -12,22 +12,33 @@ import com.example.androidcodelabs.databinding.ActivityRadioButtonBinding;
 public class RadioButtonActivity extends AppCompatActivity {
 
     private ActivityRadioButtonBinding radioButtonBinding;
-    Button verifyBtn;
+    private Button verifyBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         radioButtonBinding = ActivityRadioButtonBinding.inflate(getLayoutInflater());
         setContentView(radioButtonBinding.getRoot());
-        radioButtonBinding.verifybtn.setOnClickListener(v ->{
-            if (radioButtonBinding.radioBtn1.isChecked()) {
-                Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
-            } else if (radioButtonBinding.radioBtn2.isChecked()) {
-                Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
-            } else if (radioButtonBinding.radioBtn3.isChecked()) {
-                Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Your Answer is Correct", Toast.LENGTH_SHORT).show();
-            }
+        handleVerifyBtn();
+    }
+
+    // User Interface
+    private void handleVerifyBtn() {
+        radioButtonBinding.verifybtn.setOnClickListener(v -> {
+            setRadioBtn();
         });
+    }
+
+    // Business Logic
+    private void setRadioBtn() {
+        if (radioButtonBinding.radioBtn1.isChecked()) {
+            Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
+        } else if (radioButtonBinding.radioBtn2.isChecked()) {
+            Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
+        } else if (radioButtonBinding.radioBtn3.isChecked()) {
+            Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Your Answer is Correct", Toast.LENGTH_SHORT).show();
+        }
     }
 }
