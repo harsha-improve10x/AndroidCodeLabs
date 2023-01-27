@@ -35,7 +35,7 @@ public class ImageSwitcherActivity extends AppCompatActivity {
             @Override
             public View makeView() {
                 ImageView imageView = new ImageView(getApplicationContext());
-                imageView.setLayoutParams(new ViewGroup.LayoutParams(
+                imageView.setLayoutParams(new ImageSwitcher.LayoutParams(
                         ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT));
                 imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 imageView.setImageResource(R.drawable.garelu);
@@ -43,6 +43,7 @@ public class ImageSwitcherActivity extends AppCompatActivity {
             }
         });
     }
+
     private void handleNextBtn() {
         Animation animationOut = AnimationUtils.loadAnimation(this, android.R.anim.fade_out);
         Animation animationIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
