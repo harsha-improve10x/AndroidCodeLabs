@@ -16,6 +16,11 @@ public class RatingBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ratingBarBinding = ActivityRatingBarBinding.inflate(getLayoutInflater());
         setContentView(ratingBarBinding.getRoot());
+        handleSubmitBtn();
+    }
+
+    // User Interface
+    private void handleSubmitBtn() {
         ratingBarBinding.submitbtn.setOnClickListener(v -> {
             String rating = String.valueOf(ratingBarBinding.ratingBarRb.getRating());
             Toast.makeText(getApplicationContext(),rating, Toast.LENGTH_SHORT).show();

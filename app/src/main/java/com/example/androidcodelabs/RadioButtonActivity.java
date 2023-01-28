@@ -25,20 +25,15 @@ public class RadioButtonActivity extends AppCompatActivity {
     // User Interface
     private void handleVerifyBtn() {
         radioButtonBinding.verifybtn.setOnClickListener(v -> {
-            setRadioBtn();
+            if (radioButtonBinding.radioBtn1.isChecked()) {
+                Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
+            } else if (radioButtonBinding.radioBtn2.isChecked()) {
+                Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
+            } else if (radioButtonBinding.radioBtn3.isChecked()) {
+                Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Your Answer is Correct", Toast.LENGTH_SHORT).show();
+            }
         });
-    }
-
-    // Business Logic
-    private void setRadioBtn() {
-        if (radioButtonBinding.radioBtn1.isChecked()) {
-            Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
-        } else if (radioButtonBinding.radioBtn2.isChecked()) {
-            Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
-        } else if (radioButtonBinding.radioBtn3.isChecked()) {
-            Toast.makeText(this, "Your Answer is Wrong", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Your Answer is Correct", Toast.LENGTH_SHORT).show();
-        }
     }
 }

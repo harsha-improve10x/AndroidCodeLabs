@@ -15,7 +15,7 @@
         android:theme="@style/Theme.AndroidCodeLabs"
         tools:targetApi="31">
         <activity
-            android:name=".ImageSliderActivity"
+            android:name=".AlertDialogActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,10 +27,15 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ImageSliderActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ImageSwitcherActivity"
             android:exported="true">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -87,6 +92,8 @@
         <activity
             android:name=".RatingBarActivity"
             android:exported="true">
+
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
